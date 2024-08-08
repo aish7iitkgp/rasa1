@@ -70,7 +70,7 @@ def main():
                 model_info = mlflow.pyfunc.log_model(
                     python_model=model,
                     artifact_path=ARTIFACT_PATH,
-                    pip_requirements=["rasa==3.5.10", "mlflow==2.4.1", "azure-storage-blob", "azure-identity"]
+                    pip_requirements=["rasa==3.6.20", "mlflow==2.4.1", "azure-storage-blob", "azure-identity"]
                 )
                 logger.info(f"Model logged successfully: {model_info}")
                 mlflow.log_artifact(str(MODEL_PATH), artifact_path="rasa_model_files")
